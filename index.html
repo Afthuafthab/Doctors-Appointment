@@ -405,10 +405,31 @@
   <div class="form-bg"></div>
   
   <!-- Input to find doctor -->
-  <input class="find-dopctor" placeholder="Find your doctor" type="text" />
-  
+  <!-- <input class="find-dopctor" placeholder="Find your doctor" type="text" /> -->
+  <!-- !!!!!!!!!!!!!!!!! -->
+<div>
+  <select class="find-dopctor" id="specialization" name="specialization">
+    <option value="" disabled selected>Select Specialization</option>
+    <option value="cardiologist">Cardiologist</option>
+    <option value="pediatrician">Pediatrician</option>
+    <option value="neurologist">Neurologist</option>
+    <option value="orthopedic-surgeon">Orthopedic Surgeon</option>
+    <option value="dermatologist">Dermatologist</option>
+    <option value="general-physician">General Physician</option>
+    <option value="endocrinologist">Endocrinologist</option>
+    <option value="psychiatrist">Psychiatrist</option>
+    <option value="gynecologist">Gynecologist</option>
+    <option value="ophthalmologist">Ophthalmologist</option>
+    <option value="oncologist">Oncologist</option>
+    <option value="pulmonologist">Pulmonologist</option>
+    <option value="radiologist">Radiologist</option>
+    <option value="ent-specialist">ENT Specialist</option>
+    <option value="urologist">Urologist</option>
+  </select>
+</div>
+
   <!-- Search button -->
-  <div class="search-button">
+  <div id="searchButton" class="search-button">
     <div class="search-bg"></div>
     <img
       class="search-24dp-ffffff-fill0-wght4-icon"
@@ -419,29 +440,43 @@
 
   <!-- Location selection -->
   <div class="area">
-    <img class="loc-bg" alt="" src="./public/loc-bg.svg" />
+    <!-- <div class="form-bg"></div> -->
     
-    <div class="select-area">
-      <label for="location" style="display: block;">Select Area</label>
+    <div class=" ">
+      <!-- <label for="location" style="display: block;">Select Area</label> -->
       <select id="location" class="location-dropdown" name="location" required>
-        <option value="">Choose a location</option>
-        <option value="Kerala">Kerala</option>
-        <option value="Tamil Nadu">Tamil Nadu</option>
-        <option value="Delhi">Delhi</option>
-        <option value="Mumbai">Mumbai</option>
-        <option value="Bangalore">Bangalore</option>
-        <option value="Hyderabad">Hyderabad</option>
+        <option value="" disabled selected>Select Location</option>
+        <option value="mumbai, maharashtra">Mumbai, Maharashtra</option>
+        <option value="delhi, delhi">Delhi, Delhi</option>
+        <option value="bengaluru, karnataka">Bengaluru, Karnataka</option>
+        <option value="kolkata, westbengal">Kolkata, West Bengal</option>
+        <option value="chennai, tamilnadu">Chennai, Tamil Nadu</option>
+        <option value="ahmedabad, gujarat">Ahmedabad, Gujarat</option>
+        <option value="thiruvananthapuram, kerala">Thiruvananthapuram, Kerala</option>
+        <option value="lucknow, uttarpradesh">Lucknow, Uttar Pradesh</option>
+        <option value="pune, maharashtra">Pune, Maharashtra</option>
+        <option value="hyderabad, telangana">Hyderabad, Telangana</option>
+        <option value="jaipur, rajasthan">Jaipur, Rajasthan</option>
+        <option value="patna, bihar">Patna, Bihar</option>
+        <option value="indore, madhyapradesh">Indore, Madhya Pradesh</option>
+        <option value="nagpur, maharashtra">Nagpur, Maharashtra</option>
+        <option value="chandigarh, punjab">Chandigarh, Punjab</option>
+        <option value="mysuru, karnataka">Mysuru, Karnataka</option>
+        <option value="surat, gujarat">Surat, Gujarat</option>
+        <option value="bhopal, madhyapradesh">Bhopal, Madhya Pradesh</option>
+        <option value="kanpur, uttarpradesh">Kanpur, Uttar Pradesh</option>
+        <option value="visakhapatnam, andhrapradesh">Visakhapatnam, Andhra Pradesh</option>
       </select>
     </div>
   </div>
 
   <!-- Date picker -->
   <div class="date">
-    <div class="date-bg"></div>
-    <div class="date1">
-      <label for="date" style="display: block;">Select Date</label>
+    <!-- <div class="date-bg"></div> -->
+    <!-- <div class="date1"> -->
+      <!-- <label for="date" style="display: block;">Select Date</label> -->
       <input type="date" id="date" class="date-picker" name="date" required />
-    </div>
+    <!-- </div> -->
   </div>
 
   <!-- Submit Button -->
@@ -516,56 +551,6 @@
       </div>
     </div>
 
-    <script>
-      var bookAnAppointment = document.getElementById("bookAnAppointment");
-      if (bookAnAppointment) {
-        bookAnAppointment.addEventListener("click", function () {
-          window.open("https://forms.gle/5wWvhfe4NNLit21A7");
-        });
-      }
-      
-      var bookAnAppointmentButton = document.getElementById(
-        "bookAnAppointmentButton"
-      );
-      if (bookAnAppointmentButton) {
-        bookAnAppointmentButton.addEventListener("click", function () {
-          window.open("https://forms.gle/5wWvhfe4NNLit21A7");
-        });
-      }
-      
-      var oURSERVICES = document.getElementById("oURSERVICES");
-      if (oURSERVICES) {
-        oURSERVICES.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='servicesContainer']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start" });
-          }
-        });
-      }
-      
-      var dEPARTMENT = document.getElementById("dEPARTMENT");
-      if (dEPARTMENT) {
-        dEPARTMENT.addEventListener("click", function () {
-          var anchor = document.querySelector(
-            "[data-scroll-to='departmentSectionContainer']"
-          );
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start" });
-          }
-        });
-      }
-      
-      var bookAnAppointment = document.getElementById("bookAnAppointment");
-      if (bookAnAppointment) {
-        bookAnAppointment.addEventListener("click", function () {
-          var anchor = document.querySelector(
-            "[data-scroll-to='bookAnAppointmentButton']"
-          );
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start" });
-          }
-        });
-      }
-      </script>
+    <script src="./script.js"></script>
   </body>
 </html>
