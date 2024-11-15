@@ -20,11 +20,22 @@ body {
   --color-dimgray: #707070;
   --color-forestgreen: #4caf50;
   --color-white: #fff;
+  --color-darkslateblue: #2a3d74;
   --color-black: #000;
   --color-whitesmoke: rgba(235, 235, 235, 0.63);
   --color-lightgoldenrodyellow: #cee9c6;
+  --color-steelblue: #14568d;
+
+  /* Gaps */
+  --gap-37xl: 56px;
+
+  /* Paddings */
+  --padding-260xl: 279px;
+  --padding-16xl: 35px;
+  --padding-91xl: 110px;
 
   /* Border radiuses */
+  --br-7xl: 26px;
   --br-8xl: 27px;
   --br-14xl: 33px;
   --br-6xl: 25px;
