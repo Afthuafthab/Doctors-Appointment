@@ -972,6 +972,7 @@
 }
 .find-dopctor,
 .search-bg {
+  cursor: pointer;
   position: absolute;
   border: 1px solid var(--color-dimgray);
   box-sizing: border-box;
@@ -988,6 +989,20 @@
   font-size: var(--font-size-6xl);
   color: var(--color-black);
 }
+
+/* !!!!!!!!!!!!!!!! */
+.location-dropdown {
+  border: 1px solid var(--color-dimgray);
+  box-sizing: border-box;
+  height: 86px;
+  outline: 0;
+  background-color: var(--color-whitesmoke);
+  width: 300px;
+  font-family: var(--font-montserrat);
+  font-weight: 300;
+  font-size: var(--font-size-6xl);
+  color: var(--color-black);
+}
 .search-bg {
   top: 0;
   left: 0;
@@ -997,6 +1012,7 @@
 }
 .search-24dp-ffffff-fill0-wght4-icon {
   position: absolute;
+  cursor: pointer;
   top: 7px;
   left: 10px;
   width: 72px;
@@ -1029,9 +1045,8 @@
   width: 320px;
   height: 86px;
 }
-.area,
-.date-bg,
-.date1 {
+.area
+ {
   position: absolute;
 }
 .date-bg {
@@ -1043,12 +1058,21 @@
   width: 178px;
   height: 86px;
 }
-.date1 {
-  top: 28px;
-  left: 17px;
+/* !!!!!!!!!!!!!! */
+.date-picker{
+  border: 1px solid var(--color-dimgray);
+  box-sizing: border-box;
+  height: 86px;
+  outline: 0;
+  background-color: var(--color-whitesmoke);
+  width: 210px;
+  font-family: var(--font-montserrat);
   font-weight: 300;
-  opacity: 0.5;
+  font-size: var(--font-size-6xl);
+  color: var(--color-black);
+
 }
+
 .date,
 .form-section {
   position: absolute;
@@ -1064,6 +1088,7 @@
   height: 163px;
 }
 .book-appointment-bg {
+  transition: 100;
   position: absolute;
   top: 0;
   left: 0;
@@ -1100,8 +1125,9 @@
 .call-now-button:hover,
 .home:hover,
 .our-services:hover {
-  animation: 1s ease 0s 1 normal none scale-up;
-  opacity: 1;
+  transition: 100ms;
+  scale: 1.01;
+  opacity: 0.8;
 }
 .call-now-bg {
   position: absolute;
