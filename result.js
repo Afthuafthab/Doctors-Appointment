@@ -1,4 +1,3 @@
-// Scroll to specific sections when clicking navigation buttons
 var oURSERVICES = document.getElementById("oURSERVICES");
 if (oURSERVICES) {
   oURSERVICES.addEventListener("click", function () {
@@ -35,13 +34,13 @@ if (bookAnAppointment) {
 
 // Function to format the location for API params
 function formatLocation(location) {
-  console.log(location, "before");
-  const formatted = location.toLowerCase().replace(/-/g, ", ");
-  console.log(formatted, "after");
-  return formatted;
+  // Convert the location to lowercase and replace spaces with hyphens
+  console.log(location, "before")
+  console.log(location.toLowerCase().replace(/-/g, ', '), "after")
+  return location.toLowerCase().replace(/-/g, ', ');
 }
 
-// Function to parse query parameters from URL
+// Function to parse query parameters
 function getQueryParams() {
   const params = new URLSearchParams(window.location.search);
   return {
@@ -50,40 +49,10 @@ function getQueryParams() {
   };
 }
 
-// Function to render doctors on the page
-function renderDoctors(doctors) {
-  const doctorSection = document.querySelector(".how-to-work-section1");
-
-  if (doctorSection) {
-    doctorSection.innerHTML = ""; // Clear previous content
-
-    if (doctors.length > 0) {
-      doctors.forEach((doctor) => {
-        const doctorCard = `
-          <div class="doctor">
-            <div class="doctor-bg1"></div>
-            <img class="doctor-icon1" alt="Doctor" src="${doctor.image || './default-image.png'}" />
-            <b class="doctor-name">${doctor.name}</b>
-            <div class="doctor-information">
-              Specialization: ${doctor.specialization}<br>
-              Experience: ${doctor.experience} years<br>
-              Contact: ${doctor.contact}<br>
-              Location: ${doctor.location}
-            </div>
-          </div>`;
-        doctorSection.innerHTML += doctorCard;
-      });
-    } else {
-      doctorSection.innerHTML = `<p>No doctors found for the selected criteria.</p>`;
-    }
-  } else {
-    console.warn("Doctor section with class '.how-to-work-section1' not found.");
-  }
-}
-
-// Display results based on query parameters
+// Display results based on query params
 function displayResults() {
   const { specialization, location } = getQueryParams();
+  console.log(location)
 
   if (specialization && location) {
     // Update header text
@@ -98,28 +67,53 @@ function displayResults() {
     const formattedLocation = formatLocation(location);
 
     // Fetch data and filter based on specialization and location
-    fetch("https://mocki.io/v1/0f8e3b7e-e8bf-438e-9e44-44bcd3f7d2e3")
+    fetch("https://mocki.io/v1/11871561-e251-4b2c-a7bc-6e744265618e")
       .then((response) => {
-        console.log("API Response Status:", response.status);
+        console.log("Fetch Response:", response);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         return response.json();
       })
       .then((data) => {
-        console.log("Fetched Data:", data);
+        console.log("Fetched Data:", data, specialization, formattedLocation);
 
-        // Filter doctors based on specialization and location
+        // Filter doctors based on specialization and formatted location
         const filteredDoctors = data.filter(
           (doctor) =>
-            doctor.specialization.toLowerCase().includes(specialization.toLowerCase()) &&
-            doctor.location.toLowerCase().includes(formattedLocation.toLowerCase())
+            doctor.specialization.toLowerCase() === specialization.toLowerCase() &&
+            doctor.location.toLowerCase() === formattedLocation.toLowerCase()
         );
 
-        console.log("Filtered Doctors:", filteredDoctors);
+        console.log(filteredDoctors, "Filtered Doctors");
 
-        // Render the doctors
-        renderDoctors(filteredDoctors);
+        // Display filtered doctors
+        const doctorSection = document.querySelector(".how-to-work-section1");
+        if (doctorSection) {
+          doctorSection.innerHTML = ""; // Clear previous content
+
+          if (filteredDoctors.length > 0) {
+            filteredDoctors.forEach((doctor) => {
+              const doctorCard = `
+                <button class="doctor">
+                  <div class="doctor-bg1"></div>
+                  <img class="doctor-icon1" alt="Doctor" src="./public/doctor@2x.png" />
+                  <b class="doctor-name">${doctor.name}</b>
+                  <div class="doctor-information">
+                    Specialization: ${doctor.specialization}<br>
+                    Experience: ${doctor.experience} years<br>
+                    Contact: ${doctor.contact}<br>
+                    Location: ${doctor.location}
+                  </div>
+                </button>`;
+              doctorSection.innerHTML += doctorCard;
+            });
+          } else {
+            doctorSection.innerHTML = `<p>No doctors found for the selected criteria.</p>`;
+          }
+        } else {
+          console.warn("Doctor section with class '.how-to-work-section1' not found.");
+        }
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
