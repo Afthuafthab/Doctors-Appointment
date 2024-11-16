@@ -2,10 +2,12 @@
   0% {
     transform: scale(0.5);
   }
+
   to {
     transform: scale(1);
   }
 }
+
 .build-doctor-website-pharmacy-icon1 {
   position: absolute;
   bottom: -4423px;
@@ -15,6 +17,7 @@
   object-fit: cover;
   display: none;
 }
+
 .main-bg1 {
   position: absolute;
   top: 0;
@@ -25,14 +28,16 @@
   width: 1936px;
   height: 1443px;
 }
+
 .doctor-bg1,
 .service-section-bg1 {
-  position: absolute;
-  top: 0;
-  left: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
   width: 1920px;
   height: 729px;
 }
+
 .doctor-bg1 {
   left: 24px;
   box-shadow: 6px 9px 23px rgba(0, 0, 0, 0.16);
@@ -41,29 +46,42 @@
   width: 162px;
   height: 151px;
 }
+
 .doctor-icon1 {
-  position: absolute;
-  top: 23px;
-  left: 52px;
+
   width: 106px;
   height: 106px;
   object-fit: cover;
 }
+.doctor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 30px;
+  height: 30rem;
+  width: 25rem;
+}
 .doctor-information,
 .doctor-name {
-  position: absolute;
-  top: 179px;
-  left: 0;
+  /* position: absolute; */
+  /* top: 179px;
+  left: 0; */
+  margin-top: 15px;
   font-size: var(--font-size-11xl);
   font-family: var(--font-montserrat);
   color: var(--color-black);
   text-align: center;
 }
+
 .doctor-information {
   top: 233px;
   left: 8px;
   font-size: var(--font-size-xl);
 }
+
 .doctor-11,
 .doctor-21,
 .doctor-31 {
@@ -76,13 +94,19 @@
   width: 210px;
   height: 257px;
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping to new rows */
-  justify-content: center; /* Aligns cards horizontally */
-  gap: 20px; /* Adds spacing between cards */
-  margin: 0 auto; /* Centers the container itself */
+  flex-wrap: wrap;
+  /* Allows wrapping to new rows */
+  justify-content: center;
+  /* Aligns cards horizontally */
+  gap: 20px;
+  /* Adds spacing between cards */
+  margin: 0 auto;
+  /* Centers the container itself */
   padding: 20px;
-  position: relative; /* If you still need relative positioning for other elements */
+  position: relative;
+  /* If you still need relative positioning for other elements */
 }
+
 .doctor-11:hover,
 .doctor-21:hover,
 .doctor-31:hover,
@@ -91,25 +115,35 @@
   animation: 1s ease 0s 1 normal none scale-up;
   opacity: 1;
 }
+
 .doctor-21,
 .doctor-31 {
   left: 853px;
 }
+
 .doctor-31 {
   left: 1478px;
 }
+
 .we-found-the {
   position: absolute;
   top: 127px;
   left: 221px;
 }
+
 .how-to-work-section1 {
   position: absolute;
-  top: 290px;
+  top: 0;
   left: 0;
-  width: 1920px;
-  height: 729px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 85vh;
 }
+
 .menu-box-bg1 {
   position: absolute;
   height: 100%;
@@ -118,18 +152,22 @@
   bottom: 0;
   width: 1208px;
 }
+
 .span1 {
   color: var(--color-dimgray);
 }
+
 .doctor1 {
   color: var(--color-darkslateblue);
 }
+
 .v-doctor2 {
   position: absolute;
   top: calc(50% - 25px);
   left: calc(50% - 133px);
   font-weight: 800;
 }
+
 .logo2 {
   position: absolute;
   height: 100%;
@@ -138,6 +176,7 @@
   left: 0;
   width: 440px;
 }
+
 .about1,
 .department1,
 .home1,
@@ -155,26 +194,32 @@
   text-align: left;
   display: inline-block;
 }
+
 .about1,
 .department1,
 .our-services1 {
   left: calc(50% - 70px);
 }
+
 .about1,
 .department1 {
   left: calc(50% + 473px);
 }
+
 .about1:hover,
 .department1:hover {
   animation: 0.5s ease 0s 1 normal none scale-up;
   opacity: 1;
 }
+
 .department1 {
   left: calc(50% + 208px);
 }
+
 .book-an1 {
   margin: 0;
 }
+
 .book-an-appointment-container1 {
   position: absolute;
   top: 9px;
@@ -184,6 +229,7 @@
   color: var(--color-white);
   text-align: center;
 }
+
 .book-an-appointment3 {
   cursor: pointer;
   border: 1px solid var(--color-dimgray);
@@ -197,10 +243,12 @@
   width: 260px;
   height: 78px;
 }
+
 .book-an-appointment3:hover {
   animation: 1s ease 0s 1 normal none scale-up;
   opacity: 1;
 }
+
 .logo3,
 .navigation-bar1 {
   position: absolute;
@@ -208,25 +256,30 @@
   height: 146px;
   font-size: var(--font-size-31xl);
 }
+
 .navigation-bar1 {
   left: 0;
   width: 1920px;
   color: var(--color-forestgreen);
 }
+
 .logo3 {
   width: calc(100% - 8px);
   right: 0;
   left: 8px;
 }
+
 .designed-by-afthab1,
 .v-doctor-all1 {
   position: absolute;
   bottom: 0;
   left: 0;
 }
+
 .designed-by-afthab1 {
   bottom: 40px;
 }
+
 .logo-group {
   position: relative;
   width: 448px;
@@ -234,6 +287,7 @@
   margin-top: 8px;
   font-size: var(--font-size-6xl);
 }
+
 .specialities3 {
   position: absolute;
   top: 0;
@@ -242,6 +296,7 @@
   letter-spacing: -0.24px;
   font-weight: 600;
 }
+
 .keyboard-double-arrow-right-24-icon10 {
   position: absolute;
   height: 100%;
@@ -252,30 +307,36 @@
   width: 38px;
   object-fit: cover;
 }
+
 .neurology2 {
   position: absolute;
   top: calc(50% - 12px);
   right: -1px;
 }
+
 .cardiology4,
 .nuerology2 {
   position: absolute;
   left: 0;
   height: 38px;
 }
+
 .nuerology2 {
   top: calc(50% - 78px);
   width: 146px;
 }
+
 .cardiology4 {
   width: calc(100% - 24px);
   top: calc(50% - 33px);
   right: 24px;
 }
+
 .dentist4 {
   top: calc(50% + 12px);
   width: 112px;
 }
+
 .dentist4,
 .ortho2,
 .urology3 {
@@ -283,41 +344,49 @@
   left: 0;
   height: 38px;
 }
+
 .urology3 {
   top: calc(50% + 56px);
   width: 116px;
 }
+
 .ortho2 {
   width: calc(100% - 18px);
   right: 18px;
   bottom: 0;
 }
+
 .specialities2 {
   position: relative;
   width: 172px;
   height: 278px;
   margin-top: 7px;
 }
+
 .cardiology6,
 .nuerology3 {
   position: absolute;
   left: 0;
   height: 38px;
 }
+
 .nuerology3 {
   top: calc(50% - 78px);
   width: 116px;
 }
+
 .cardiology6 {
   width: calc(100% - 6px);
   top: calc(50% - 33px);
   right: 6px;
 }
+
 .dentist6 {
   width: 100%;
   top: calc(50% + 12px);
   right: 0;
 }
+
 .dentist6,
 .ortho3,
 .urology5 {
@@ -325,15 +394,18 @@
   left: 0;
   height: 38px;
 }
+
 .urology5 {
   top: calc(50% + 56px);
   width: 74px;
 }
+
 .ortho3 {
   width: calc(100% - 2px);
   right: 2px;
   bottom: 0;
 }
+
 .services2 {
   position: relative;
   width: 146px;
@@ -341,6 +413,7 @@
   margin-top: 7px;
   margin-left: 160px;
 }
+
 .contact-us1 {
   position: absolute;
   top: 0;
@@ -348,6 +421,7 @@
   font-size: var(--font-size-11xl);
   font-weight: 600;
 }
+
 .call-24dp-ffffff-fill0-wght400-icon1,
 .location-on-24dp-ffffff-fill0-icon1 {
   position: absolute;
@@ -357,9 +431,11 @@
   height: 42px;
   object-fit: cover;
 }
+
 .call-24dp-ffffff-fill0-wght400-icon1 {
   top: calc(50% + 10px);
 }
+
 .mail-24dp-ffffff-fill0-wght400-icon1 {
   position: absolute;
   bottom: 0;
@@ -368,26 +444,31 @@
   height: 37px;
   object-fit: cover;
 }
+
 .local-streetkerala-6831061 {
   top: calc(50% - 43px);
   right: -1px;
 }
+
 .div1,
 .local-streetkerala-6831061,
 .supportvdoctorcom1 {
   position: absolute;
   font-weight: 600;
 }
+
 .div1 {
   top: calc(50% + 19px);
   left: calc(50% - 104.5px);
 }
+
 .supportvdoctorcom1 {
   text-decoration: none;
   right: 25px;
   bottom: 8px;
   color: inherit;
 }
+
 .contact-us-group {
   position: relative;
   width: 307px;
@@ -395,6 +476,7 @@
   margin-bottom: 49px;
   margin-left: 130px;
 }
+
 .footer-section1 {
   position: absolute;
   bottom: -6px;
@@ -411,14 +493,13 @@
   font-size: var(--font-size-xl);
   color: var(--color-white);
 }
+
 .result-page {
   position: relative;
-  background: radial-gradient(
-    50% 50%at 50% 50%,
-    #fff,
-    rgba(180, 222, 182, 0.25) 41.84%,
-    rgba(76, 175, 80, 0.12)
-  );
+  background: radial-gradient(50% 50%at 50% 50%,
+      #fff,
+      rgba(180, 222, 182, 0.25) 41.84%,
+      rgba(76, 175, 80, 0.12));
   width: 100%;
   height: 1437px;
   text-align: center;
