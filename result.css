@@ -71,11 +71,17 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  position: absolute;
   top: 340px;
   left: 228px;
   width: 210px;
   height: 257px;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to new rows */
+  justify-content: center; /* Aligns cards horizontally */
+  gap: 20px; /* Adds spacing between cards */
+  margin: 0 auto; /* Centers the container itself */
+  padding: 20px;
+  position: relative; /* If you still need relative positioning for other elements */
 }
 .doctor-11:hover,
 .doctor-21:hover,
