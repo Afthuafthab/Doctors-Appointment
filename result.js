@@ -95,9 +95,12 @@ function displayResults() {
           if (filteredDoctors.length > 0) {
             filteredDoctors.forEach((doctor) => {
               const doctorCard = `
-                <button class="doctor">
-                  <div class="doctor-bg1"></div>
+              <div class="how-to-work-section1">
+
+                <div class="doctor">
+                  <div class="doctor-bg1">
                   <img class="doctor-icon1" alt="Doctor" src="./public/doctor@2x.png" />
+                  </div>
                   <b class="doctor-name">${doctor.name}</b>
                   <div class="doctor-information">
                     Specialization: ${doctor.specialization}<br>
@@ -105,7 +108,9 @@ function displayResults() {
                     Contact: ${doctor.contact}<br>
                     Location: ${doctor.location}
                   </div>
-                </button>`;
+                </div>
+      </div>
+      `;
               doctorSection.innerHTML += doctorCard;
             });
           } else {
