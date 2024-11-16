@@ -2,9 +2,8 @@
   "name": "doctors_appointment",
   "version": "1.0.0",
   "description": "A doctor appointment booking application.",
-  "main": "index.html",
   "scripts": {
-    "start": "parcel serve ./*.html", 
+    "start": "parcel serve ./*.html",
     "build": "parcel build ./*.html --dist-dir dist"
   },
   "author": "Afthab",
