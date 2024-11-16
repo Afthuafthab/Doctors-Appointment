@@ -25,64 +25,84 @@
   width: 1936px;
   height: 1443px;
 }
-.how-to-work-section1 {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of doctor cards */
-  gap: 20px; /* Add spacing between cards */
-  justify-content: center; /* Center align cards */
-  padding: 20px; /* Add padding inside the container */
-  width: 100%; /* Ensure it spans the full width */
-  height: auto; /* Let height adjust dynamically */
+.doctor-bg1,
+.service-section-bg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 729px;
 }
-
-.doctor {
-  flex: 0 0 calc(33.33% - 20px); /* 3 cards per row with spacing */
-  border: 1px solid #ccc;
-  border-radius: var(--br-14xl);
+.doctor-bg1 {
+  left: 24px;
   box-shadow: 6px 9px 23px rgba(0, 0, 0, 0.16);
+  border-radius: var(--br-14xl);
   background-color: var(--color-white);
-  text-align: center;
-  padding: 16px;
-  transition: transform 0.3s ease;
+  width: 162px;
+  height: 151px;
 }
-
-.doctor:hover {
-  transform: scale(1.05); /* Subtle zoom effect on hover */
-}
-
 .doctor-icon1 {
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  top: 23px;
+  left: 52px;
+  width: 106px;
+  height: 106px;
   object-fit: cover;
-  border-radius: 50%; /* Make the image circular */
-  margin-bottom: 8px;
 }
-
+.doctor-information,
 .doctor-name {
+  position: absolute;
+  top: 179px;
+  left: 0;
   font-size: var(--font-size-11xl);
   font-family: var(--font-montserrat);
   color: var(--color-black);
-  margin-bottom: 8px;
+  text-align: center;
 }
-
 .doctor-information {
+  top: 233px;
+  left: 8px;
   font-size: var(--font-size-xl);
-  font-family: var(--font-montserrat);
-  color: var(--color-black);
 }
-
-@media (max-width: 768px) {
-  .doctor {
-    flex: 0 0 calc(50% - 20px); /* 2 cards per row on tablets */
-  }
+.doctor-11,
+.doctor-21,
+.doctor-31 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 340px;
+  left: 228px;
+  width: 210px;
+  height: 257px;
 }
-
-@media (max-width: 480px) {
-  .doctor {
-    flex: 0 0 100%; /* 1 card per row on mobile devices */
-  }
-
-
+.doctor-11:hover,
+.doctor-21:hover,
+.doctor-31:hover,
+.home1:hover,
+.our-services1:hover {
+  animation: 1s ease 0s 1 normal none scale-up;
+  opacity: 1;
+}
+.doctor-21,
+.doctor-31 {
+  left: 853px;
+}
+.doctor-31 {
+  left: 1478px;
+}
+.we-found-the {
+  position: absolute;
+  top: 127px;
+  left: 221px;
+}
+.how-to-work-section1 {
+  position: absolute;
+  top: 290px;
+  left: 0;
+  width: 1920px;
+  height: 729px;
 }
 .menu-box-bg1 {
   position: absolute;
