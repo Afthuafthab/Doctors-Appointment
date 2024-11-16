@@ -67,7 +67,7 @@ function displayResults() {
     const formattedLocation = formatLocation(location);
 
     // Fetch data and filter based on specialization and location
-    fetch("https://mocki.io/v1/8f509225-a140-4a69-acec-1f3e59f23c05")
+    fetch("https://mocki.io/v1/16126eeb-3c83-43e6-b40b-48a5d1aea5b9")
       .then((response) => {
         console.log("Fetch Response:", response);
         if (!response.ok) {
