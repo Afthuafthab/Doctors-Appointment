@@ -31,7 +31,7 @@
   }
 }
 .build-doctor-website-pharmacy-icon {
-  position: absolute;
+  position: flexbox;
   height: calc(100% + 1377px);
   width: 100%;
   top: 325px;
@@ -58,7 +58,7 @@
 .logo,
 .main-bg,
 .v-doctor {
-  position: absolute;
+  position: flexbox;
 }
 .v-doctor {
   top: calc(50% - 25px);
@@ -75,7 +75,7 @@
 }
 .designed-by-afthab,
 .v-doctor-all {
-  position: absolute;
+  position: flexbox;
   bottom: 0;
   left: 0;
 }
@@ -90,7 +90,7 @@
   font-size: var(--font-size-6xl);
 }
 .specialities1 {
-  position: absolute;
+  position: flexbox;
   top: 0;
   left: 0;
   font-size: var(--font-size-11xl);
