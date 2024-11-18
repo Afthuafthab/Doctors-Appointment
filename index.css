@@ -956,10 +956,7 @@
   animation: 1s ease 0s infinite normal none scale-up;
   opacity: 1;
 }
-.banner-image-icon:active {
-  animation: 1s ease 0s infinite normal none shadow-pop-tr;
-  opacity: 1;
-}
+
 .form-bg {
   position: absolute;
   top: 0;
@@ -1163,19 +1160,19 @@
   color: inherit;
 }
 .your-virtual-path-to-container {
-  position: absolute;
+  position: flexbox;
   top: 0;
   left: 2px;
 }
 .find-and-connect-container {
-  position: absolute;
+  position: flexbox;
   top: 240px;
   left: 0;
   font-size: var(--font-size-6xl);
   font-weight: 300;
 }
 .main-text-and-description {
-  position: absolute;
+  position: flexbox;
   top: 244px;
   left: 0;
   width: 821px;
@@ -1186,7 +1183,7 @@
 }
 .banner-section,
 .smudge-parent {
-  position: absolute;
+  position: flexbox;
   top: 0;
   left: 0;
   width: 2026px;
