@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records - VDoctor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/health-records.3a01df49.css">
+    <link rel="stylesheet" href="/health-records.8b4a37bd.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                V<span>Doctor</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="#doctors" class="nav-link">Doctors</a>
+                <a href="#specialties" class="nav-link">Specialties</a>
+                <a href="/health-records.html" class="nav-link active">Health Records</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-auth">
+                <div class="nav-buttons-container">
+                    <a href="/login.html" class="nav-btn btn btn-secondary">Login</a>
+                    <a href="/register.html" class="nav-btn btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Health Records Dashboard -->
+    <main class="health-records-container">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">My Health Records</h1>
+                <p class="dashboard-subtitle">Manage your medical history, medications, and health information securely.</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="visits-count">0</h3>
+                        <p>Medical Visits</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="medications-count">0</h3>
+                        <p>Medications</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="allergies-count">0</h3>
+                        <p>Allergies</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="vaccinations-count">0</h3>
+                        <p>Vaccinations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Records Management -->
+            <div class="records-section">
+                <div class="section-header">
+                    <h2>Health Records</h2>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" id="add-record-btn">
+                            <i class="fas fa-plus"></i> Add Record
+                        </button>
+                        <div class="filter-dropdown">
+                            <select id="record-filter">
+                                <option value="all">All Records</option>
+                                <option value="visits">Medical Visits</option>
+                                <option value="medications">Medications</option>
+                                <option value="allergies">Allergies</option>
+                                <option value="vaccinations">Vaccinations</option>
+                                <option value="lab-results">Lab Results</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Records List -->
+                <div class="records-list" id="records-list">
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>No health records yet</h3>
+                        <p>Start by adding your first health record to keep track of your medical history.</p>
+                        <button class="btn btn-primary" id="add-first-record-btn">
+                            <i class="fas fa-plus"></i> Add Your First Record
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Record Modal -->
+    <div class="modal" id="add-record-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Add Health Record</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="record-form">
+                    <div class="form-group">
+                        <label for="record-type">Record Type *</label>
+                        <select id="record-type" name="type" required="">
+                            <option value="">Select record type</option>
+                            <option value="visits">Medical Visit</option>
+                            <option value="medications">Medication</option>
+                            <option value="allergies">Allergy</option>
+                            <option value="vaccinations">Vaccination</option>
+                            <option value="lab-results">Lab Result</option>
+                        </select>
+                    </div>
+
+                    <!-- Medical Visit Fields -->
+                    <div class="record-fields" id="visit-fields" style="display: none">
+                        <div class="form-group">
+                            <label for="visit-date">Visit Date *</label>
+                            <input type="date" id="visit-date" name="visitDate" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor-name">Doctor Name</label>
+                            <input type="text" id="doctor-name" name="doctorName" placeholder="Dr. John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Specialty</label>
+                            <input type="text" id="specialty" name="specialty" placeholder="Cardiology">
+                        </div>
+                        <div class="form-group">
+                            <label for="diagnosis">Diagnosis</label>
+                            <textarea id="diagnosis" name="diagnosis" rows="3" placeholder="Enter diagnosis details"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Additional notes from the visit"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Medication Fields -->
+                    <div class="record-fields" id="medication-fields" style="display: none">
+                        <div class="form-group">
+                            <label for="medication-name">Medication Name *</label>
+                            <input type="text" id="medication-name" name="medicationName" required="" placeholder="e.g., Aspirin">
+                        </div>
+                        <div class="form-group">
+                            <label for="dosage">Dosage</label>
+                            <input type="text" id="dosage" name="dosage" placeholder="e.g., 100mg">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <input type="text" id="frequency" name="frequency" placeholder="e.g., Twice daily">
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" name="startDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date">End Date (if applicable)</label>
+                            <input type="date" id="end-date" name="endDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="prescribing-doctor">Prescribing Doctor</label>
+                            <input type="text" id="prescribing-doctor" name="prescribingDoctor" placeholder="Dr. John Smith">
+                        </div>
+                    </div>
+
+                    <!-- Allergy Fields -->
+                    <div class="record-fields" id="allergy-fields" style="display: none">
+                        <div class="form-group">
+                            <label for="allergen">Allergen *</label>
+                            <input type="text" id="allergen" name="allergen" required="" placeholder="e.g., Penicillin">
+                        </div>
+                        <div class="form-group">
+                            <label for="reaction">Reaction</label>
+                            <input type="text" id="reaction" name="reaction" placeholder="e.g., Rash, Hives">
+                        </div>
+                        <div class="form-group">
+                            <label for="severity">Severity</label>
+                            <select id="severity" name="severity">
+                                <option value="mild">Mild</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="severe">Severe</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="allergy-notes">Notes</label>
+                            <textarea id="allergy-notes" name="allergyNotes" rows="3" placeholder="Additional details about the allergy"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Vaccination Fields -->
+                    <div class="record-fields" id="vaccination-fields" style="display: none">
+                        <div class="form-group">
+                            <label for="vaccine-name">Vaccine Name *</label>
+                            <input type="text" id="vaccine-name" name="vaccineName" required="" placeholder="e.g., COVID-19 Vaccine">
+                        </div>
+                        <div class="form-group">
+                            <label for="vaccination-date">Vaccination Date *</label>
+                            <input type="date" id="vaccination-date" name="vaccinationDate" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="batch-number">Batch/Lot Number</label>
+                            <input type="text" id="batch-number" name="batchNumber" placeholder="Lot number if known">
+                        </div>
+                        <div class="form-group">
+                            <label for="administered-by">Administered By</label>
+                            <input type="text" id="administered-by" name="administeredBy" placeholder="Clinic or doctor name">
+                        </div>
+                    </div>
+
+                    <!-- Lab Results Fields -->
+                    <div class="record-fields" id="lab-fields" style="display: none">
+                        <div class="form-group">
+                            <label for="test-name">Test Name *</label>
+                            <input type="text" id="test-name" name="testName" required="" placeholder="e.g., Blood Test">
+                        </div>
+                        <div class="form-group">
+                            <label for="test-date">Test Date *</label>
+                            <input type="date" id="test-date" name="testDate" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="results">Results</label>
+                            <textarea id="results" name="results" rows="4" placeholder="Enter test results and values"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="lab-name">Lab Name</label>
+                            <input type="text" id="lab-name" name="labName" placeholder="Laboratory name">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="save-btn">Save Record</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating AI Chatbot -->
+    <div class="floating-chatbot" id="floating-chatbot">
+        <div class="chat-icon" id="chat-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-window" id="chat-window" style="display: none">
+            <div class="chat-header">
+                <span>AI Medical Assistant</span>
+                <button class="close-chat" id="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI Medical Assistant. I can help answer general medical questions, provide health information, and guide you to the right resources. How can I assist you today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask me anything about health...">
+                <button class="btn btn-primary" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/health-records.56acd662.js"></script>
+    <script src="/health-records.672d4772.js"></script>
+<script src="/health-records.97d0a4c8.js"></script></body>
+</html>

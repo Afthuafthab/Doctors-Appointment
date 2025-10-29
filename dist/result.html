@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - V Doctor</title>
+    <link rel="stylesheet" href="/result.5167c5ab.css">
+    <link rel="stylesheet" href="/result.689f5f05.css">
+    <link rel="stylesheet" href="/result.9e4c6fd2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">V <span class="logo-doctor">DOCTOR</span></span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-btn" onclick="window.location.href='index.html'">HOME</button>
+                <button class="nav-btn">OUR SERVICES</button>
+                <button class="nav-btn">ABOUT</button>
+                <button class="nav-btn">DEPARTMENT</button>
+                <button class="nav-btn book-appointment-btn">
+                    <span>BOOK AN</span>
+                    <span>APPOINTMENT</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header Section -->
+            <section class="results-header">
+                <h1 class="results-title">We found the following doctors for you..</h1>
+                <div class="search-summary" id="search-summary"></div>
+            </section>
+
+            <!-- Sort Controls -->
+            <section class="sort-section">
+                <div class="sort-container">
+                    <label for="sort-select" class="sort-label">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="rating">Rating (High to Low)</option>
+                        <option value="name">Name (A-Z)</option>
+                        <option value="location">Location</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Results Grid -->
+            <section class="results-section">
+                <div id="doctor-results" class="doctor-grid">
+                    <!-- Doctor cards will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="footer-logo-text">V DOCTOR</div>
+                    <p>© 2024 V Doctor. All rights reserved.</p>
+                    <p>Designed by Afthab</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Specialities</h3>
+                <ul class="footer-list">
+                    <li><i class="fas fa-arrow-right"></i> Neurology</li>
+                    <li><i class="fas fa-arrow-right"></i> Cardiology</li>
+                    <li><i class="fas fa-arrow-right"></i> Dentist</li>
+                    <li><i class="fas fa-arrow-right"></i> Urology</li>
+                    <li><i class="fas fa-arrow-right"></i> Orthopedic</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-list">
+                    <li><i class="fas fa-arrow-right"></i> Medical</li>
+                    <li><i class="fas fa-arrow-right"></i> Operation</li>
+                    <li><i class="fas fa-arrow-right"></i> Laboratory</li>
+                    <li><i class="fas fa-arrow-right"></i> ICU</li>
+                    <li><i class="fas fa-arrow-right"></i> Test Room</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>local street, kerala 683106</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 99999 00000</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@vdoctor.com">support@vdoctor.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/result.96b28112.js"></script>
+<script src="/result.b2caba6b.js"></script></body>
+</html>

@@ -31,7 +31,7 @@
   }
 }
 .build-doctor-website-pharmacy-icon {
-  position: flexbox;
+  position: absolute; /* Keep this as it's a background image */
   height: calc(100% + 1377px);
   width: 100%;
   top: 325px;
@@ -46,21 +46,21 @@
 }
 .main-bg {
   height: 100%;
-  width: 100.83%;
+  width: 100%; /* Changed to 100% for better responsiveness */
   top: 0;
-  right: -0.83%;
+  right: 0;
   bottom: 0;
   left: 0;
   background: radial-gradient(50% 50%at 50% 50%, #fff, #e8ffdb);
-  border: 1px solid var(--color-dimgray);
+  /* border: 1px solid var(--color-dimgray); */ /* Removed redundant border */
   box-sizing: border-box;
 }
 .logo,
 .main-bg,
 .v-doctor {
-  position: flexbox;
+  position: absolute;
 }
-.v-doctor {
+.v-doctor { /* This is for the footer logo */
   top: calc(50% - 25px);
   left: calc(50% - 133px);
   font-weight: 800;
@@ -68,14 +68,14 @@
 .logo {
   width: calc(100% - 8px);
   top: 0;
-  right: 0;
+  /* right: 0; */ /* Removed as width is calc(100% - 8px) */
   left: 8px;
   height: 146px;
   font-size: var(--font-size-31xl);
 }
 .designed-by-afthab,
 .v-doctor-all {
-  position: flexbox;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -83,14 +83,14 @@
   bottom: 40px;
 }
 .logo-parent {
-  position: relative;
+  /* position: relative; */ /* Managed by flexbox in footer */
   width: 448px;
   height: 389px;
   margin-top: 8px;
   font-size: var(--font-size-6xl);
 }
 .specialities1 {
-  position: flexbox;
+  /* position: absolute; */ /* Managed by flexbox in footer */
   top: 0;
   left: 0;
   font-size: var(--font-size-11xl);
@@ -98,7 +98,7 @@
   font-weight: 600;
 }
 .keyboard-double-arrow-right-24-icon {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox in footer */
   height: 100%;
   top: 0;
   bottom: 0;
@@ -108,7 +108,7 @@
   object-fit: cover;
 }
 .neurology {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox in footer */
   top: calc(50% - 12px);
   right: -1px;
 }
@@ -116,7 +116,7 @@
 .nuerology {
   position: absolute;
   left: 0;
-  height: 38px;
+  height: 38px; /* Keep height */
 }
 .nuerology {
   top: calc(50% - 78px);
@@ -132,7 +132,7 @@
   width: 112px;
 }
 .dentist,
-.ortho,
+.ortho, /* Keep position absolute for now, as these are sub-elements */
 .urology {
   position: absolute;
   left: 0;
@@ -148,7 +148,7 @@
   bottom: 0;
 }
 .specialities {
-  position: relative;
+  /* position: relative; */ /* Managed by flexbox in footer */
   width: 172px;
   height: 278px;
   margin-top: 7px;
@@ -190,7 +190,7 @@
   bottom: 0;
 }
 .services {
-  position: relative;
+  /* position: relative; */ /* Managed by flexbox in footer */
   width: 146px;
   height: 278px;
   margin-top: 7px;
@@ -198,7 +198,7 @@
 }
 .contact-us {
   position: absolute;
-  top: 0;
+  top: 0; /* Keep absolute for now, as it's a heading within a relative container */
   left: 11px;
   font-size: var(--font-size-11xl);
   font-weight: 600;
@@ -244,29 +244,28 @@
   color: inherit;
 }
 .contact-us-parent {
-  position: relative;
+  /* position: relative; */ /* Managed by flexbox in footer */
   width: 307px;
   height: 218px;
   margin-bottom: 49px;
   margin-left: 130px;
 }
 .footer-section {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 960px);
+  position: relative;
+  width: 100%; /* Ensure it takes full width */
+  height: auto;
+  margin: 20px 0;
   background-color: #14568d;
-  width: 1920px;
-  height: 424px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 279px 35px 110px;
+  padding: 20px; /* Use padding for spacing */
   box-sizing: border-box;
   gap: 56px;
   color: var(--color-white);
 }
 .right-slide-circle {
-  position: absolute;
+  /* position: absolute; */ /* Will be managed by flexbox/grid in testimonial section */
   top: 102px;
   left: 1235px;
   width: 63px;
@@ -274,7 +273,7 @@
 }
 .testimonials {
   position: absolute;
-  top: 0;
+  top: 0; /* Keep absolute for now, as it's a heading within a relative container */
   left: 0;
   letter-spacing: 0.86px;
   font-weight: 600;
@@ -282,7 +281,7 @@
 }
 .what-our-client {
   position: absolute;
-  top: 37px;
+  top: 37px; /* Keep absolute for now */
   left: 0;
   font-size: var(--font-size-11xl);
   letter-spacing: 1.29px;
@@ -291,7 +290,7 @@
   margin: 0;
 }
 .v-doctor-made-container {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 0;
   left: 0;
   font-size: var(--font-size-xl);
@@ -299,7 +298,7 @@
 }
 .jennifer-robinson,
 .leleandm-usa {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 67px;
   left: 0;
   letter-spacing: 1.76px;
@@ -310,7 +309,7 @@
   font-weight: 500;
 }
 .client-review {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 107px;
   left: 0;
   width: 605px;
@@ -319,7 +318,7 @@
   font-size: var(--font-size-mini);
 }
 .testimonials-parent {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 0;
   left: 331px;
   width: 605px;
@@ -327,7 +326,7 @@
 }
 .client-photo-icon {
   position: absolute;
-  top: 12px;
+  top: 12px; /* Keep absolute for now */
   left: 61px;
   width: 223px;
   height: 219px;
@@ -340,22 +339,19 @@
   height: 59px;
 }
 .testimonial-section {
-  position: absolute;
-  height: 5.56%;
-  width: 66.67%;
-  top: 81.41%;
-  right: 16.67%;
-  bottom: 13.04%;
-  left: 16.67%;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
 }
 .dep-card-bg-1,
-.department-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-white);
-  width: 1920px;
-  height: 790px;
+.department-bg { /* Will be refactored */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* background-color: var(--color-white); */
+  /* width: 1920px; */
+  /* height: 790px; */
 }
 .dep-card-bg-1 {
   border-radius: var(--br-25xl);
@@ -364,7 +360,7 @@
   height: 434px;
 }
 .first-aid-icon {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 34px;
   left: 129px;
   width: 176px;
@@ -373,7 +369,7 @@
 }
 .comprehensive-health-assessmen-container,
 .general-medicine {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   font-family: var(--font-montserrat);
   color: var(--color-black);
 }
@@ -386,7 +382,7 @@
   text-align: left;
 }
 .comprehensive-health-assessmen-container {
-  top: 269px;
+  /* top: 269px; */ /* Managed by flexbox/grid */
   left: 38px;
   font-size: var(--font-size-xl);
   letter-spacing: -0.2px;
@@ -394,7 +390,7 @@
 }
 .buttomn-bg {
   position: absolute;
-  top: 352px;
+  top: 352px; /* Keep absolute for now */
   left: 88px;
   border-radius: var(--br-13xl);
   background-color: var(--color-white);
@@ -403,7 +399,7 @@
 }
 .find-a-general-physician-container {
   position: absolute;
-  top: 361px;
+  top: 361px; /* Keep absolute for now */
   left: 145px;
   font-size: var(--font-size-xl);
   letter-spacing: -0.2px;
@@ -416,11 +412,11 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 434px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%; /* Make it flexible */
   height: 434px;
 }
 .card-1:hover,
@@ -428,10 +424,11 @@
 .card-3:hover {
   animation: 1s ease 0s 1 normal none scale-up;
   opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .cardiology3,
 .expert-heart-care-container,
-.view-cardiologists {
+.view-cardiologists { /* Managed by flexbox/grid */
   position: absolute;
   font-family: var(--font-montserrat);
   color: var(--color-black);
@@ -445,7 +442,7 @@
   text-align: left;
 }
 .expert-heart-care-container,
-.view-cardiologists {
+.view-cardiologists { /* Managed by flexbox/grid */
   top: 269px;
   left: 29px;
   font-size: var(--font-size-xl);
@@ -484,7 +481,7 @@
   text-align: left;
 }
 .explore-dermatologists,
-.specialized-skin-hair-container {
+.specialized-skin-hair-container { /* Managed by flexbox/grid */
   top: 264px;
   left: 29px;
   font-size: var(--font-size-xl);
@@ -492,13 +489,13 @@
   text-align: center;
 }
 .explore-dermatologists {
-  top: 372px;
+  top: 372px; /* Keep absolute for now */
   left: 99px;
   font-weight: 600;
 }
 .card-1-parent,
 .card-3 {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   height: 434px;
 }
 .card-3 {
@@ -506,40 +503,36 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  top: 0;
-  left: 1098px;
-  width: 434px;
+  /* top: 0; */
+  /* left: 1098px; */
+  width: 100%; /* Make it flexible */
 }
 .card-1-parent {
-  top: 300px;
-  left: 194px;
-  width: 1532px;
+  position: relative;
+  width: 100%;
+  max-width: 1532px;
+  height: auto;
+  margin: 20px auto;
 }
 .explore-our-range-container,
 .our-specialties {
-  position: absolute;
-  top: 156px;
-  left: 381px;
+  position: relative;
+  margin: 20px auto;
   letter-spacing: -0.3px;
 }
 .our-specialties {
-  top: 60px;
-  left: 726px;
   font-size: 60px;
   letter-spacing: -0.6px;
 }
 .department-section {
-  position: absolute;
-  height: 19%;
+  position: relative;
   width: 100%;
-  top: 60.32%;
-  right: 0;
-  bottom: 20.68%;
-  left: 0;
+  height: auto;
+  margin: 20px 0;
   font-size: var(--font-size-11xl);
 }
 .best-doctor-bg {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(188, 225, 177, 0.77), #fff);
@@ -547,7 +540,7 @@
   height: 700px;
 }
 .dr-white-bg {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 1px;
   left: 1px;
   border-radius: var(--br-4xl);
@@ -557,7 +550,7 @@
 }
 .dr-arun,
 .kerala {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   font-family: var(--font-montserrat);
   color: var(--color-black);
 }
@@ -569,7 +562,7 @@
   text-align: left;
 }
 .kerala {
-  top: 391px;
+  /* top: 391px; */ /* Managed by flexbox/grid */
   left: 52px;
   font-size: var(--font-size-mini);
   letter-spacing: -0.25px;
@@ -577,7 +570,7 @@
 }
 .five-stars-icon,
 .location-on-24dp-000000-fill0-icon {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 382px;
   left: 16px;
   width: 36px;
@@ -591,7 +584,7 @@
   height: 48px;
 }
 .young-handsome-physician-medic-icon {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 0;
   left: 0;
   border-radius: var(--br-6xl) var(--br-6xl) 0 0;
@@ -603,10 +596,10 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 188px;
-  left: 1448px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 188px; */
+  /* left: 1448px; */
   width: 304px;
   height: 428px;
 }
@@ -616,10 +609,11 @@
 .doctor-4:hover {
   animation: 1s ease 0s 1 normal none shadow-drop-bottom;
   opacity: 1;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
 }
 .dentist3,
 .dr-tarun {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 321px;
   left: 26px;
   font-size: var(--font-size-6xl);
@@ -629,7 +623,7 @@
   text-align: center;
 }
 .dentist3 {
-  top: 351px;
+  /* top: 351px; */ /* Managed by flexbox/grid */
   left: 27px;
   font-size: var(--font-size-xl);
   letter-spacing: -0.2px;
@@ -639,10 +633,10 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 188px;
-  left: 1037px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 188px; */
+  /* left: 1037px; */
   width: 304px;
   height: 428px;
 }
@@ -654,7 +648,7 @@
   text-align: center;
 }
 .dermatologist {
-  top: 350px;
+  /* top: 350px; */ /* Managed by flexbox/grid */
   left: 23px;
   font-size: var(--font-size-xl);
   letter-spacing: -0.2px;
@@ -662,7 +656,7 @@
 }
 .kerala1 {
   top: 391px;
-  left: 56px;
+  left: 56px; /* Keep absolute for now */
   font-size: var(--font-size-mini);
   letter-spacing: -0.25px;
 }
@@ -670,21 +664,20 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 188px;
-  left: 626px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 188px; */
+  /* left: 626px; */
   width: 304px;
   height: 428px;
 }
 .best-doctors {
-  position: absolute;
-  top: 0;
-  left: 1px;
+  position: relative;
+  margin: 20px auto;
   font-weight: 600;
 }
 .dr-mehnaz {
-  top: 320px;
+  /* top: 320px; */ /* Managed by flexbox/grid */
   left: 23px;
   font-size: var(--font-size-6xl);
   font-weight: 500;
@@ -698,7 +691,7 @@
   text-align: center;
 }
 .cardiologist {
-  top: 347px;
+  /* top: 347px; */ /* Managed by flexbox/grid */
   left: 23px;
   font-size: var(--font-size-xl);
   letter-spacing: -0.2px;
@@ -723,19 +716,17 @@
 }
 .best-doctor,
 .best-doctors-parent {
-  position: absolute;
-  top: 79px;
-  left: 215px;
-  width: 304px;
-  height: 537px;
+  position: relative;
+  width: 100%;
+  max-width: 1577px;
+  height: auto;
+  margin: 20px auto;
 }
 .best-doctor {
-  height: 16.84%;
+  position: relative;
   width: 100%;
-  top: 43.48%;
-  right: 0;
-  bottom: 39.68%;
-  left: 0;
+  height: auto;
+  margin: 20px 0;
   font-size: var(--font-size-21xl);
 }
 .doctor-bg,
@@ -776,7 +767,7 @@
   white-space: pre-wrap;
 }
 .discover-skilled-doctors-container {
-  top: 233px;
+  /* top: 233px; */ /* Managed by flexbox/grid */
   left: 0;
   font-size: var(--font-size-xl);
 }
@@ -784,10 +775,10 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 0; */
+  /* left: 0; */
   width: 332px;
   height: 281px;
 }
@@ -796,10 +787,11 @@
 .service-works:hover {
   animation: 1s ease 0s 1 normal none scale-up;
   opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .calender-bg {
   position: absolute;
-  top: 0;
+  top: 0; /* Keep absolute for now */
   left: 83px;
   box-shadow: 6px 9px 23px rgba(0, 0, 0, 0.16);
   border-radius: var(--br-14xl);
@@ -808,7 +800,7 @@
   height: 151px;
 }
 .calendar-icon {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 23px;
   left: 111px;
   width: 106px;
@@ -817,7 +809,7 @@
 }
 .book-an-appointment,
 .effortlessly-book-opportunitie-container {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   font-family: var(--font-montserrat);
   color: var(--color-black);
   text-align: center;
@@ -829,7 +821,7 @@
   white-space: pre-wrap;
 }
 .effortlessly-book-opportunitie-container {
-  top: 233px;
+  /* top: 233px; */ /* Managed by flexbox/grid */
   left: 10px;
   font-size: var(--font-size-xl);
 }
@@ -837,17 +829,17 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 621px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 0; */
+  /* left: 621px; */
   width: 396px;
   height: 281px;
 }
 .first-aid-bg {
   position: absolute;
   top: 0;
-  left: 74px;
+  left: 74px; /* Keep absolute for now */
   box-shadow: 6px 9px 23px rgba(0, 0, 0, 0.16);
   border-radius: var(--br-14xl);
   background-color: var(--color-white);
@@ -856,7 +848,7 @@
 }
 .medical-icon {
   position: absolute;
-  top: 23px;
+  top: 23px; /* Keep absolute for now */
   left: 102px;
   width: 106px;
   height: 106px;
@@ -864,7 +856,7 @@
 }
 .get-services {
   position: absolute;
-  top: 187px;
+  top: 187px; /* Keep absolute for now */
   left: 59px;
   font-size: var(--font-size-11xl);
   font-family: var(--font-montserrat);
@@ -875,10 +867,10 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 1253px;
+  background-color: transparent; /* Keep transparent */
+  /* position: absolute; */ /* Managed by flexbox/grid */
+  /* top: 0; */
+  /* left: 1253px; */
   width: 324px;
   height: 281px;
 }
@@ -892,40 +884,28 @@
   left: 967px;
 }
 .doctor-works-parent {
-  position: absolute;
-  top: 340px;
-  left: 175px;
-  width: 1577px;
-  height: 281px;
+  /* position: relative; */ /* Managed by flexbox/grid */
+  width: 100%;
+  max-width: 1577px;
+  height: auto;
+  margin: 20px auto;
 }
 .discover-book-and-container {
-  position: absolute;
-  top: 225px;
-  left: 450px;
+  position: relative;
+  margin: 20px auto; /* Keep margin auto */
   font-size: var(--font-size-11xl);
   font-weight: 500;
 }
 .how-it-works {
-  position: absolute;
-  top: 127px;
-  left: 702px;
+  position: relative;
+  margin: 20px auto; /* Keep margin auto */
 }
 .how-to-work-section {
-  position: absolute;
-  height: 17.53%;
+  position: relative;
   width: 100%;
-  top: 25.83%;
-  right: 0;
-  bottom: 56.64%;
-  left: 0;
+  height: auto;
+  margin: 20px 0;
   font-size: var(--font-size-51xl);
-}
-.banner-bg {
-  position: absolute;
-  top: 127px;
-  left: 127px;
-  width: 1772px;
-  height: 964px;
 }
 .smudge-icon {
   top: 0;
@@ -953,12 +933,14 @@
   height: 739px;
 }
 .banner-image-icon:hover {
-  animation: 1s ease 0s infinite normal none scale-up;
+  /* animation: 1s ease 0s infinite normal none scale-up; */ /* Removed for now, can be re-added */
   opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .banner-image-icon:active {
   animation: 1s ease 0s infinite normal none shadow-pop-tr;
   opacity: 1;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
 }
 .form-bg {
   position: absolute;
@@ -970,16 +952,16 @@
   width: 1113px;
   height: 163px;
 }
-.find-dopctor,
-.search-bg {
-  cursor: pointer;
-  position: absolute;
-  border: 1px solid var(--color-dimgray);
-  box-sizing: border-box;
-  height: 86px;
-}
-.find-dopctor {
-  outline: 0;
+/* .find-dopctor, */
+/* .search-bg { */
+/*   cursor: pointer; */
+/*   position: absolute; */
+/*   border: 1px solid var(--color-dimgray); */
+/*   box-sizing: border-box; */
+/*   height: 86px; */
+/* } */
+.find-dopctor { /* Keep specific styles, but remove absolute positioning */
+  /* outline: 0; */ /* Handled by global styles or form group */
   background-color: var(--color-whitesmoke);
   top: 39px;
   left: 33px;
@@ -1004,7 +986,7 @@
   color: var(--color-black);
 }
 .search-bg {
-  top: 0;
+  top: 0; /* Keep top 0 */
   left: 0;
   border-radius: 24px;
   background-color: var(--color-forestgreen);
@@ -1012,7 +994,7 @@
 }
 .search-24dp-ffffff-fill0-wght4-icon {
   position: absolute;
-  cursor: pointer;
+  cursor: pointer; /* Keep cursor pointer */
   top: 7px;
   left: 10px;
   width: 72px;
@@ -1020,10 +1002,10 @@
   object-fit: cover;
 }
 .loc-bg,
-.search-button {
-  position: absolute;
-  top: 39px;
-  left: 979px;
+.search-button { /* Will be refactored */
+  /* position: absolute; */
+  /* top: 39px; */
+  /* left: 979px; */
   width: 92px;
   height: 86px;
 }
@@ -1039,29 +1021,26 @@
   font-weight: 300;
   opacity: 0.5;
 }
-.area {
-  top: 39px;
-  left: 405px;
-  width: 320px;
-  height: 86px;
+.area { /* Removed, replaced by form-group */
+  /* top: 39px; */
+  /* left: 405px; */
+  /* width: 320px; */
+  /* height: 86px; */
+  /* position: absolute; */
 }
-.area
- {
-  position: absolute;
+.date-bg { /* Removed, replaced by form-group */
+  /* top: 0; */
+  /* left: 0; */
+  /* background-color: var(--color-whitesmoke); */
+  /* border: 1px solid var(--color-dimgray); */
+  /* box-sizing: border-box; */
+  /* width: 178px; */
+  /* height: 86px; */
 }
-.date-bg {
-  top: 0;
-  left: 0;
-  background-color: var(--color-whitesmoke);
-  border: 1px solid var(--color-dimgray);
-  box-sizing: border-box;
-  width: 178px;
-  height: 86px;
-}
-/* !!!!!!!!!!!!!! */
 .date-picker{
   border: 1px solid var(--color-dimgray);
   box-sizing: border-box;
+  /* position: absolute; */ /* Removed absolute positioning */
   height: 86px;
   outline: 0;
   background-color: var(--color-whitesmoke);
@@ -1073,22 +1052,25 @@
 
 }
 
-.date,
-.form-section {
-  position: absolute;
-  top: 39px;
-  left: 749px;
-  width: 178px;
-  height: 86px;
-}
-.form-section {
-  top: 973px;
-  left: 335px;
-  width: 1113px;
-  height: 163px;
+/* .date, */ /* Removed, replaced by form-group */
+/* .form-section { */
+/*   position: absolute; */
+/*   top: 39px; */
+/*   left: 749px; */
+/*   width: 178px; */
+/*   height: 86px; */
+/* } */
+.form-section { /* Refactored to use flexbox */
+  position: relative;
+  width: 100%;
+  max-width: 1113px;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .book-appointment-bg {
-  transition: 100;
+  transition: 100ms; /* Added unit */
   position: absolute;
   top: 0;
   left: 0;
@@ -1100,7 +1082,7 @@
   height: 90px;
 }
 .book-an-appointment1 {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 30px;
   left: 49px;
   font-size: var(--font-size-6xl);
@@ -1114,23 +1096,22 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 658px;
-  left: 0;
-  width: 378px;
-  height: 90px;
+  background-color: transparent; /* Keep transparent */
+  /* position: relative; */ /* Managed by flexbox/grid */
+  width: 100%; /* Make it flexible */
+  height: 90px; /* Keep height */
+  margin: 20px auto;
 }
 .book-an-appointment-button:hover,
 .call-now-button:hover,
 .home:hover,
 .our-services:hover {
-  transition: 100ms;
+  transition: 0.3s ease;
   scale: 1.01;
   opacity: 0.8;
 }
 .call-now-bg {
-  position: absolute;
+  position: absolute; /* Keep absolute for now */
   top: 0;
   left: 0;
   border-radius: var(--br-8xl);
@@ -1140,7 +1121,7 @@
   height: 90px;
 }
 .call-now {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox/grid */
   top: 30px;
   left: 106px;
   font-weight: 300;
@@ -1155,54 +1136,47 @@
 }
 .call-now-button {
   text-decoration: none;
-  position: absolute;
-  top: 658px;
-  left: 422px;
-  width: 290px;
-  height: 90px;
+  /* position: relative; */ /* Managed by flexbox/grid */
+  width: 100%; /* Make it flexible */
+  height: 90px; /* Keep height */
+  margin: 20px auto; /* Keep margin auto */
   color: inherit;
 }
 .your-virtual-path-to-container {
-  position: absolute;
-  top: 0;
-  left: 2px;
+  position: relative;
+  margin: 20px auto;
 }
 .find-and-connect-container {
-  position: absolute;
-  top: 240px;
-  left: 0;
+  position: relative;
+  margin: 20px auto;
   font-size: var(--font-size-6xl);
   font-weight: 300;
 }
 .main-text-and-description {
-  position: absolute;
-  top: 244px;
-  left: 0;
-  width: 821px;
-  height: 390px;
+  /* position: relative; */ /* Managed by flexbox/grid */
+  width: 100%;
+  max-width: 821px;
+  height: auto; /* Keep auto height */
+  margin: 20px auto;
   text-align: left;
   font-size: 90px;
   color: var(--color-forestgreen);
 }
-.banner-section,
-.smudge-parent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2026px;
-  height: 1218px;
-}
 .banner-section {
-  height: 29.29%;
-  width: 105.52%;
-  top: 0.46%;
-  right: -9.11%;
-  bottom: 70.25%;
-  left: 3.59%;
+  position: relative;
+  width: 100%; /* Ensure full width */
+  height: auto;
   font-size: var(--font-size-6xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .menu-box-bg {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox */
   height: 100%;
   top: 0;
   right: 0;
@@ -1216,15 +1190,22 @@
   color: #2a3d74;
 }
 .home,
-.logo1 {
-  position: absolute;
+.logo1 { /* Refactored to use flexbox */
+  /* position: absolute; */
+  /* height: 100%; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* width: 440px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
-.logo1 {
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 440px;
+.logo1 .v-doctor { /* Specific style for the logo text within the navigation */
+  position: static; /* Override absolute positioning */
+  font-size: var(--font-size-31xl);
+  font-weight: 800;
 }
 .home {
   left: calc(50% - 224px);
@@ -1233,7 +1214,7 @@
 .about,
 .home,
 .our-services {
-  cursor: pointer;
+  cursor: pointer; /* Keep cursor pointer */
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -1244,7 +1225,7 @@
   display: inline-block;
 }
 .our-services {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox */
   left: calc(50% - 70px);
   font-family: var(--font-montserrat);
 }
@@ -1259,15 +1240,15 @@
 .about,
 .book-an-appointment-container,
 .department {
-  position: absolute;
+  /* position: absolute; */ /* Managed by flexbox */
   font-family: var(--font-montserrat);
 }
 .department {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  top: calc(50% - 18px);
+  background-color: transparent; /* Keep transparent */
+  /* top: calc(50% - 18px); */ /* Managed by flexbox */
   left: calc(50% + 208px);
   font-size: var(--font-size-11xl);
   color: var(--color-forestgreen);
@@ -1276,7 +1257,7 @@
 }
 .book-an-appointment-container {
   top: 9px;
-  left: 34px;
+  left: 34px; /* Keep absolute for now */
   font-size: var(--font-size-6xl);
   color: var(--color-white);
   text-align: center;
@@ -1286,9 +1267,9 @@
   border: 1px solid var(--color-dimgray);
   padding: 0;
   background-color: var(--color-forestgreen);
-  position: absolute;
-  top: calc(50% - 39px);
-  right: 68px;
+  /* position: absolute; */ /* Managed by flexbox */
+  /* top: calc(50% - 39px); */
+  /* right: 68px; */
   border-radius: 26px;
   box-sizing: border-box;
   width: 260px;
@@ -1298,15 +1279,13 @@
   animation: 1s ease 0s 1 normal none scale-up;
   opacity: 1;
 }
-.navigation-bar {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 146px;
+.navigation-bar { /* Refactored to use flexbox */
+  /* position: relative; */
+  width: 100%; /* Ensure full width */
+  height: 100px; /* Adjusted height */
   font-size: var(--font-size-31xl);
   color: var(--color-forestgreen);
+  flex-shrink: 0;
 }
 .first-page {
   position: relative;
@@ -1317,9 +1296,959 @@
     rgba(76, 175, 80, 0.12)
   );
   width: 100%;
-  height: 4158px;
-  text-align: center;
+  min-height: 100vh;
   font-size: var(--font-size-xl);
   color: var(--color-black);
   font-family: var(--font-montserrat);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Desktop/Laptop Styles (1024px - 1920px) */
+@media (min-width: 1024px) {
+  .first-page {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .navigation-bar {
+    width: 100%;
+    height: 100px;
+  }
+
+  /* .banner-section { */ /* Refactored */
+  /*   width: 100%; */
+  /*   height: auto; */
+  /*   margin: 20px 0; */
+  /* } */
+
+  .banner-bg {
+    width: 100%;
+    height: auto;
+  }
+
+  .smudge-parent {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .smudge-icon, .pattern-icon, .banner-image-icon { */ /* Refactored */
+  /*   width: 50%; */
+  /*   height: auto; */
+  /*   left: 25%; */
+  /* } */
+
+  .form-section {
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  /* .main-text-and-description { */ /* Refactored */
+  .main-text-and-description {
+    width: 50%;
+    font-size: 70px;
+    margin: 20px auto;
+  }
+
+  .your-virtual-path-to-container {
+    font-size: 70px;
+  }
+
+  .find-and-connect-container {
+    font-size: 30px;
+  }
+
+  /* .book-an-appointment-button, .call-now-button { */ /* Refactored */
+  /*   width: 40%; */
+  /*   display: inline-block; */
+  /*   margin-right: 5%; */
+  /* } */
+
+  .how-to-work-section {
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .doctor-works-parent {
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .doctor-works, .book-works, .service-works {
+    width: 28%;
+  }
+
+  .discover-book-and-container {
+    font-size: 28px;
+    left: 20%;
+    width: 60%;
+  }
+
+  .how-it-works {
+    font-size: 50px;
+    left: 30%;
+  }
+
+  .department-section {
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .card-1-parent {
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-1, .card-2, .card-3 {
+    width: 28%;
+  }
+
+  .our-specialties {
+    font-size: 50px;
+    left: 30%;
+  }
+
+  .explore-our-range-container {
+    font-size: 24px;
+    left: 20%;
+    width: 60%;
+  }
+
+  .best-doctor {
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .best-doctors-parent {
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .doctor-1, .doctor-2, .doctor-3, .doctor-4 {
+    width: 22%;
+  }
+
+  .testimonial-section {
+    width: 60%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    margin: 20px 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-parent {
+    width: 25%;
+  }
+
+  .specialities, .services, .contact-us-parent {
+    width: 25%;
+  }
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .first-page {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .navigation-bar {
+    position: relative;
+    height: 120px;
+  }
+
+  .logo1 {
+    width: 300px;
+  }
+
+  .home, .our-services, .about, .department {
+    font-size: 24px;
+  }
+
+  /* .book-an-appointment2 { */ /* Refactored */
+  /*   width: 220px; */
+  /*   height: 60px; */
+  /*   right: 50px; */
+  /* } */
+
+  .book-an-appointment-container {
+    font-size: 18px;
+  }
+
+  .banner-section {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .banner-bg {
+    width: 100%;
+    height: auto;
+  }
+
+  .smudge-parent {
+    width: 100%;
+  }
+
+  /* .smudge-icon, .pattern-icon, .banner-image-icon { */ /* Refactored */
+  /*   width: 80%; */
+  /*   left: 10%; */
+  /* } */
+  
+  .form-section {
+    position: static;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  /* .find-dopctor, .location-dropdown, .date-picker { */ /* Refactored */
+  /*   width: 100%; */
+  /*   margin-bottom: 10px; */
+  /* } */
+
+  /* .area, .date { */ /* Refactored */
+  /*   width: 48%; */
+  /*   display: inline-block; */
+  /* } */
+  
+  .area {
+    margin-right: 4%;
+  }
+
+  .search-button {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* .main-text-and-description { */ /* Refactored */
+  /*   position: static; */
+  /*   width: 80%; */
+  /*   font-size: 60px; */
+  /*   margin: 20px auto; */
+  /* } */
+
+  .your-virtual-path-to-container {
+    font-size: 60px;
+  }
+
+  .find-and-connect-container {
+    font-size: 24px;
+  }
+
+  /* .book-an-appointment-button, .call-now-button { */ /* Refactored */
+  /*   width: 45%; */
+  /*   display: inline-block; */
+  /*   margin-right: 5%; */
+  /* } */
+
+  .call-now-button {
+    margin-right: 0;
+  }
+
+  .how-to-work-section {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .doctor-works-parent {
+    width: 90%;
+    left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .doctor-works, .book-works, .service-works {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .discover-book-and-container {
+    font-size: 24px;
+    left: 10%;
+    width: 80%;
+  }
+
+  .how-it-works {
+    font-size: 40px;
+    left: 20%;
+  }
+
+  .department-section {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .card-1-parent {
+    width: 90%;
+    left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-1, .card-2, .card-3 {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .our-specialties {
+    font-size: 40px;
+    left: 10%;
+  }
+
+  .explore-our-range-container {
+    font-size: 20px;
+    left: 10%;
+    width: 80%;
+  }
+
+  .best-doctor {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .best-doctors-parent {
+    width: 90%;
+    left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .doctor-1, .doctor-2, .doctor-3, .doctor-4 {
+    width: 23%;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-section {
+    position: static;
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .footer-section {
+    position: static;
+    padding: 20px;
+    height: auto;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-parent {
+    margin-bottom: 20px;
+  }
+
+  .specialities, .services, .contact-us-parent {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Styles (< 768px) */
+@media (max-width: 768px) {
+  .first-page {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .navigation-bar {
+    position: relative;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo1 {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .home, .our-services, .about, .department {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  /* .book-an-appointment2 { */ /* Refactored */
+  /*   width: 180px; */
+  /*   height: 50px; */
+  /*   position: static; */
+  /*   margin-top: 10px; */
+  /* } */
+
+  .banner-section {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  /* .smudge-icon, .pattern-icon, .banner-image-icon { */ /* Refactored */
+  /*   display: none; */
+  /* } */
+
+  .form-section {
+    position: static;
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  /* .find-dopctor, .location-dropdown, .date-picker { */ /* Refactored */
+  /*   width: 100%; */
+  /*   margin-bottom: 10px; */
+  /*   font-size: 18px; */
+  /* } */
+
+  /* .area, .date { */ /* Refactored */
+  /*   width: 100%; */
+  /* } */
+  
+  .search-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .main-text-and-description {
+    position: static;
+    width: 95%;
+    font-size: 40px;
+    margin: 20px auto;
+  }
+
+  /* .your-virtual-path-to-container { */ /* Refactored */
+  /*   font-size: 40px; */
+  /* } */
+
+  /* .find-and-connect-container { */ /* Refactored */
+  /*   font-size: 18px; */
+  /* } */
+
+  /* .book-an-appointment-button, .call-now-button { */ /* Refactored */
+  /*   width: 100%; */
+  /*   margin-bottom: 10px; */
+  /* } */
+
+  .how-to-work-section {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .doctor-works-parent {
+    width: 95%;
+    left: 2.5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-works, .book-works, .service-works {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .discover-book-and-container {
+    font-size: 20px;
+    left: 5%;
+    width: 90%;
+  }
+
+  .how-it-works {
+    font-size: 30px;
+    left: 10%;
+  }
+
+  .department-section {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .card-1-parent {
+    width: 95%;
+    left: 2.5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1, .card-2, .card-3 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .best-doctor {
+    position: static;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .best-doctors-parent {
+    width: 95%;
+    left: 2.5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-1, .doctor-2, .doctor-3, .doctor-4 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .our-specialties {
+    font-size: 30px;
+    left: 5%;
+  }
+
+  .explore-our-range-container {
+    font-size: 16px;
+    left: 5%;
+    width: 90%;
+  }
+
+  .testimonial-section {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .testimonials-parent {
+    width: 100%;
+  }
+
+  .client-review {
+    width: 100%;
+  }
+
+  .footer-section {
+    position: static;
+    padding: 15px;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .logo-parent {
+    margin-bottom: 15px;
+  }
+
+  .specialities, .services, .contact-us-parent {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- NEW/REVISED STYLES FOR NAVIGATION AND BANNER SECTIONS --- */
+
+/* Navigation Bar */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--color-white); /* Assuming a white background for nav */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.navigation-bar .logo1 {
+  flex-shrink: 0;
+}
+
+.navigation-bar .v-doctor {
+  position: static; /* Override absolute positioning */
+  font-size: var(--font-size-31xl);
+  font-weight: 800;
+  color: var(--color-forestgreen);
+}
+
+.navigation-bar .span {
+  color: var(--color-dimgray);
+}
+
+.navigation-bar .doctor {
+  color: var(--color-darkslateblue);
+}
+
+.navigation-bar button {
+  margin: 0 15px;
+  font-size: var(--font-size-xl); /* Adjusted for better fit */
+  color: var(--color-forestgreen);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navigation-bar button:hover {
+  color: var(--color-darkslateblue);
+}
+
+.navigation-bar .book-an-appointment2 {
+  position: static; /* Override absolute positioning */
+  margin-left: auto; /* Push to the right */
+  padding: 10px 20px;
+  border-radius: var(--br-7xl);
+  background-color: var(--color-forestgreen);
+  color: var(--color-white);
+  font-size: var(--font-size-xl);
+  white-space: nowrap;
+  height: auto; /* Let content define height */
+}
+
+.navigation-bar .book-an-appointment-container {
+  position: static; /* Override absolute positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* Banner Section */
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+  text-align: center;
+}
+
+.smudge-parent {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limit width for larger screens */
+  height: 600px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.smudge-icon, .pattern-icon, .banner-image-icon {
+  position: absolute;
+  object-fit: contain; /* Use contain to fit within bounds */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.smudge-icon {
+  opacity: 0.3; /* Make it subtle */
+}
+
+.pattern-icon {
+  opacity: 0.5; /* Make it subtle */
+}
+
+.banner-image-icon {
+  position: relative; /* Bring to front */
+  z-index: 10;
+}
+
+.main-text-and-description {
+  text-align: center;
+  max-width: 900px;
+}
+
+.your-virtual-path-to-container {
+  font-size: 3em; /* Relative font size */
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.find-and-connect-container {
+  font-size: 1.2em; /* Relative font size */
+  line-height: 1.5;
+}
+
+.book-an-appointment-button, .call-now-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border-radius: var(--br-8xl);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: auto; /* Allow content to define width */
+  margin: 10px; /* Add some spacing */
+}
+
+.book-an-appointment-button {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-forestgreen);
+  color: var(--color-black);
+}
+
+.call-now-button {
+  background-color: var(--color-forestgreen);
+  color: var(--color-white);
+  border: 1px solid var(--color-forestgreen);
+}
+
+.call-now-button img {
+  margin-left: 10px;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Spacing between form groups */
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 30px;
+  box-shadow: 5px 28px 37px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 1000px; /* Limit width */
+  margin: 30px auto; /* Center the form */
+}
+
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-grow: 1; /* Allow inputs to take available space */
+  justify-content: center;
+}
+
+.form-group {
+  flex: 1 1 250px; /* Allow items to grow, shrink, and have a base width */
+  min-width: 200px; /* Minimum width for form elements */
+}
+
+.form-section select,
+.form-section input[type="date"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid var(--color-dimgray);
+  border-radius: 10px;
+  font-size: var(--font-size-xl);
+  background-color: var(--color-whitesmoke);
+  color: var(--color-black);
+  outline: none;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.form-section .search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Fixed width for the button */
+  height: 80px; /* Fixed height for the button */
+  border-radius: 50%; /* Make it circular */
+  background-color: var(--color-forestgreen);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section .search-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+.form-section .search-button img {
+  position: static; /* Override absolute positioning */
+  width: 40px;
+  height: 40px;
+}
+
+/* Media Queries for Navigation and Banner */
+@media (max-width: 1024px) {
+  .navigation-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .navigation-bar .logo1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navigation-bar button:not(.book-an-appointment2) {
+    margin: 5px 10px;
+    font-size: var(--font-size-mini);
+  }
+
+  .navigation-bar .book-an-appointment2 {
+    margin-top: 10px;
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .banner-section {
+    padding: 30px 15px;
+  }
+
+  .smudge-parent {
+    height: 400px;
+  }
+
+  .main-text-and-description {
+    max-width: 700px;
+  }
+
+  .your-virtual-path-to-container {
+    font-size: 2.5em;
+  }
+
+  .find-and-connect-container {
+    font-size: 1em;
+  }
+
+  .form-section {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .form-inputs {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .form-group {
+    flex: 1 1 100%; /* Stack inputs vertically */
+  }
+
+  .form-section select,
+  .form-section input[type="date"] {
+    font-size: var(--font-size-base);
+    padding: 12px 15px;
+  }
+
+  .form-section .search-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .form-section .search-button img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-bar {
+    padding: 10px 5px;
+  }
+
+  .navigation-bar .v-doctor {
+    font-size: var(--font-size-21xl);
+  }
+
+  .navigation-bar button:not(.book-an-appointment2) {
+    font-size: var(--font-size-xs);
+    margin: 5px 5px;
+  }
+
+  .navigation-bar .book-an-appointment2 {
+    width: 90%;
+    max-width: 200px;
+    font-size: var(--font-size-base);
+    padding: 8px 15px;
+  }
+
+  .banner-section {
+    padding: 20px 10px;
+  }
+
+  .smudge-parent {
+    height: 300px;
+  }
+
+  .smudge-icon, .pattern-icon {
+    display: none; /* Hide subtle background images on small screens */
+  }
+
+  .your-virtual-path-to-container {
+    font-size: 2em;
+  }
+
+  .find-and-connect-container {
+    font-size: 0.9em;
+  }
+
+  .book-an-appointment-button, .call-now-button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 12px 20px;
+    font-size: var(--font-size-base);
+  }
+
+  .form-section {
+    margin: 20px auto;
+  }
+
+  .form-section select,
+  .form-section input[type="date"] {
+    font-size: var(--font-size-sm);
+    padding: 10px 12px;
+  }
+
+  .form-section .search-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .form-section .search-button img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-bar button:not(.book-an-appointment2) {
+    font-size: var(--font-size-xxs); /* Even smaller for very small screens */
+    margin: 3px 5px;
+  }
+
+  .your-virtual-path-to-container {
+    font-size: 1.5em;
+  }
+
+  .find-and-connect-container {
+    font-size: 0.8em;
+  }
 }

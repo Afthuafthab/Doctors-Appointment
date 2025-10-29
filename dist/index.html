@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDoctor - Your Virtual Path to Healthcare</title>
+    <link rel="stylesheet" href="/health-records.3a01df49.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">V <span>DOCTOR</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">OUR SERVICES</a></li>
+                <li class="nav-item"><a href="#specialties" class="nav-link">DEPARTMENT</a></li>
+                <li class="nav-item"><a href="/health-records.html" class="nav-link">HEALTH RECORDS</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">ABOUT</a></li>
+            </ul>
+            <div class="nav-buttons-container">
+                <div class="nav-auth" id="auth-links">
+                    <!-- Auth links will be dynamically inserted here -->
+                </div>
+                <a href="https://forms.gle/5wWvhfe4NNLit21A7" target="_blank" class="btn btn-primary nav-btn">BOOK AN APPOINTMENT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Your Virtual Path to Health care</h1>
+                    <p class="hero-subtitle">Find and connect with trusted doctors from the comfort of your home. V Doctor offers a convenient and seamless experience for virtual consultations allowing you to access quality healthcare anytime, anywhere.</p>
+                    <div class="hero-buttons">
+                        <a href="https://forms.gle/5wWvhfe4NNLit21A7" target="_blank" class="btn btn-secondary">Book An Appointment</a>
+                        <a href="tel:+919999900000" class="btn btn-secondary">Call now <i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- AI-generated style medical background -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section" id="search">
+            <div class="container">
+                <form class="search-bar" id="doctor-search-form">
+                    <div class="form-group">
+                        <select id="specialization-search">
+                            <option value="">Select Specialization</option>
+                            <option value="Cardiologist">Cardiologist</option>
+                            <option value="Dermatologist">Dermatologist</option>
+                            <option value="Dentist">Dentist</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Orthopedics">Orthopedics</option>
+                            <option value="Urology">Urology</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="location-search">
+                            <option value="">Select Location</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date-search">
+                    </div>
+                    <button type="submit" class="search-btn" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </section>
+
+        <!-- AI Symptom Checker Section -->
+        <section class="symptom-checker-section" id="symptom-checker">
+            <div class="container">
+                <h2 class="section-title">AI Symptom Checker</h2>
+                <p class="section-subtitle">Describe your symptoms, and our AI will suggest the appropriate medical specialty.</p>
+                <div class="symptom-checker-container">
+                    <textarea id="symptoms-input" placeholder="e.g., chest pain, headache, skin rash..." rows="4"></textarea>
+                    <button class="btn btn-primary" id="check-symptoms-btn">Check Symptoms</button>
+                </div>
+                <div id="symptom-results" class="symptom-results" style="display: none">
+                    <h3>Suggested Specialties:</h3>
+                    <ul id="suggested-specialties"></ul>
+                    <button class="btn btn-secondary" id="search-suggested-btn">Search for Doctors</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating AI Chatbot -->
+        <div class="floating-chatbot" id="floating-chatbot">
+            <div class="chat-icon" id="chat-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-window" id="chat-window" style="display: none">
+                <div class="chat-header">
+                    <span>AI Medical Assistant</span>
+                    <button class="close-chat" id="close-chat">&times;</button>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI Medical Assistant. I can help answer general medical questions, provide health information, and guide you to the right resources. How can I assist you today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Ask me anything about health...">
+                    <button class="btn btn-primary" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works!</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                            <!-- Placeholder for Find a Doctor icon -->
+                            <img src="https://cdn-icons-png.flaticon.com/512/3064/3064039.png" alt="Find a doctor icon" class="step-icon">
+                        </div>
+                        <h3>Find A Doctor</h3>
+                        <p>Discover skilled doctors based on specialization and location.</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                             <!-- Placeholder for Book an Appointment icon -->
+                            <img src="https://cdn-icons-png.flaticon.com/512/2693/2693507.png" alt="Calendar icon" class="step-icon">
+                        </div>
+                        <h3>Book An Appointment</h3>
+                        <p>Effortlessly book opportunities at your convenience.</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                             <!-- Placeholder for Get Services icon -->
+                            <img src="https://cdn-icons-png.flaticon.com/512/10518/10518373.png" alt="Medical services icon" class="step-icon">
+                        </div>
+                        <h3>Get Services</h3>
+                        <p>Receive personalized healthcare services tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Specialties Section -->
+        <section class="specialties-section" id="specialties">
+            <div class="container">
+                <h2 class="section-title">Our Specialties</h2>
+                <div class="specialties-grid">
+                    <div class="specialty-card">
+                        <!-- Placeholder for General Medicine icon -->
+                        <img src="https://cdn-icons-png.flaticon.com/512/9036/9036613.png" alt="First aid icon" class="specialty-icon">
+                        <h3>General Medicine</h3>
+                        <p>Comprehensive health assessments, preventive care, and treatment for common illnesses.</p>
+                        <a href="#" class="btn btn-tertiary">Find a General Physician</a>
+                    </div>
+                    <div class="specialty-card">
+                        <!-- Placeholder for Cardiology icon -->
+                        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="Cardiogram icon" class="specialty-icon">
+                        <h3>Cardiology</h3>
+                        <p>Expert heart care, including diagnosis and management of cardiovascular diseases.</p>
+                        <a href="#" class="btn btn-tertiary">View Cardiologists</a>
+                    </div>
+                    <div class="specialty-card">
+                        <!-- Placeholder for Dermatology icon -->
+                        <img src="https://cdn-icons-png.flaticon.com/512/1000/1000991.png" alt="Skin care icon" class="specialty-icon">
+                        <h3>Dermatology</h3>
+                        <p>Specialized skin, hair, and nail care, for common and complex conditions.</p>
+                        <a href="#" class="btn btn-tertiary">Explore Dermatologists</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Doctors Section -->
+        <section class="doctors-section" id="doctors">
+            <div class="container">
+                <h2 class="section-title">Best Doctors</h2>
+                <div class="doctor-grid" id="doctor-grid">
+                    <!-- Doctor cards will be dynamically inserted here -->
+                </div>
+                <p id="no-results-message" class="no-results" style="display: none">No doctors found matching your criteria.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="reviews">
+            <div class="container">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card-container">
+                        <!-- Testimonial cards will be dynamically inserted here -->
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="/index.html" class="nav-logo">V <span>DOCTOR</span></a>
+                    <p>&copy; 2024 V Doctor. All rights reserved.</p>
+                    <p>Designed by Afthab</p>
+                    <p>Project By: Mohammed Afthab C S & Mehnas Fathima N</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Specialities</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-right"></i> Neurology</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Cardiology</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Dentist</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Urology</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Orthopedic</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-right"></i> Medical</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Operation</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Laboratory</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> ICU</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Test Room</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> local street, kerala 683106</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 99999 00000</li>
+                        <li><i class="fa-solid fa-envelope"></i> support@vdoctor.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/health-records.672d4772.js"></script>
+<script src="/Doctors-Appointment-main.3464ddca.js"></script></body>
+</html>
